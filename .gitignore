@@ -32,3 +32,5 @@ demo_tokens.py
 /playwright/.cache/
 /playwright/.auth/
 e2e/.auth/
+server_log*.txt
+server_output_log.txt
