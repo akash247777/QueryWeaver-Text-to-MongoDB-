@@ -1,0 +1,100 @@
+﻿  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\starlette\_exception_handler.py", 
+line 53, in wrapped_app
+    raise exc
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\starlette\_exception_handler.py", 
+line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\fastapi\middleware\asyncexitstack.p
+y", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\starlette\routing.py", line 716, 
+in __call__
+    await self.middleware_stack(scope, 
+receive, send)
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\starlette\routing.py", line 736, 
+in app
+    await route.handle(scope, receive, send)
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\starlette\routing.py", line 290, 
+in handle
+    await self.app(scope, receive, send)
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\fastapi\routing.py", line 130, in 
+app
+    await wrap_app_handling_exceptions(app, 
+request)(scope, receive, send)
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\starlette\_exception_handler.py", 
+line 53, in wrapped_app
+    raise exc
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\starlette\_exception_handler.py", 
+line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\fastapi\routing.py", line 117, in 
+app
+    await response(scope, receive, send)
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\starlette\responses.py", line 269, 
+in __call__
+    with collapse_excgroups():
+         ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\contextlib.py", line 
+162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\starlette\_utils.py", line 87, in 
+collapse_excgroups
+    raise exc
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\starlette\responses.py", line 273, 
+in wrap
+    await func()
+  File "C:\Project\QueryWeaver-main\venv\Lib\si
+te-packages\starlette\responses.py", line 253, 
+in stream_response
+    async for chunk in self.body_iterator:
+    ...<2 lines>...
+        await send({"type": 
+"http.response.body", "body": chunk, 
+"more_body": True})
+  File "C:\Project\QueryWeaver-main\api\core\te
+xt2mongodb.py", line 321, in generate
+    answer_an = agent_an.get_analysis(
+        user_query=queries_history[-1],
+    ...<5 lines>...
+        user_rules_spec=user_rules_spec
+    )
+  File "C:\Project\QueryWeaver-main\api\agents\
+analysis_agent.py", line 44, in get_analysis
+    prompt = self._build_prompt(
+        user_query, formatted_schema, 
+db_description,
+        instructions, memory_context, 
+database_type, user_rules_spec
+    )
+  File "C:\Project\QueryWeaver-main\api\agents\
+analysis_agent.py", line 322, in _build_prompt
+    M10. For fields identified as 'ObjectId' 
+(like _id) in the schema, use the BSON 
+Extended JSON syntax in filters: {"field": 
+{"$oid": "24-hex-chars"}}.
+                                               
+                                               
+                                 
+^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Invalid format specifier ' 
+"24-hex-chars"' for object of type 'str'
+WARNING:  WatchFiles detected changes in 
+'api\agents\analysis_agent.py'. Reloading...
+ INFO:     127.0.0.1:57848 - "GET /api/graphs HTTP/1.1" 404 Not Found
+2026-03-10 16:04:25,491 - INFO - Using local 
+Guest authentication fallback
+INFO:     127.0.0.1:57857 - "GET /graphs HTTP/1.1" 200 OK
