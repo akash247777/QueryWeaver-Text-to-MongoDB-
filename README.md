@@ -1,4 +1,9 @@
 <div align="center">
+  
+
+https://github.com/user-attachments/assets/eec0808c-570c-4274-b9c1-1eaff9a0701f
+
+
   <img src="https://github.com/user-attachments/assets/34663279-0273-4c21-88a8-d20700020a07" alt="QueryWeaver Logo" width="600px" />
   <h1>✨ QueryWeaver: Text-to-MongoDB ✨</h1>
   <p><b>Transform natural language into powerful MongoDB queries with graph-powered schema intelligence.</b></p>
