@@ -96,13 +96,14 @@ npm install
 ```
 
 #### 4. Run the Application
+
 Start the backend (from the root):
-```bash
-pipenv run uvicorn api.index:app --host 0.0.0.0 --port 5000 --reload
+```powershell
+python -m api.index
 ```
 
 Start the frontend (from `/app`):
-```bash
+```powershell
 npm run dev
 ```
 
